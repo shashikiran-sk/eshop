@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="header__logo"></div>
+            <div className="header_search"></div>
+            <div className="header__nav">
+                <div className="nav__item">
+                    <div className="nav__itemLineOne"></div>
+                    <div className="nav__itemLineTwo"></div>
+                </div>
+                <div className="nav__item">
+                    <div className="nav__itemLineOne"></div>
+                    <div className="nav__itemLineTwo"></div>
+                </div>
+                <div className="nav__item">
+                    <ShoppingBasketIcon fontSize='large'></ShoppingBasketIcon>
+                    <div className="nav__itemLineTwo"></div>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
