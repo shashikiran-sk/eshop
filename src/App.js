@@ -1,27 +1,37 @@
 import './App.css';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import Home from "./Home";
+import Header from "./Header";
+import Checkout from "./Checkout";
+import Login from "./Login";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
-    return (
-        <div className="App">
-            <div className="header__logo"></div>
-            <div className="header_search"></div>
-            <div className="header__nav">
-                <div className="nav__item">
-                    <div className="nav__itemLineOne"></div>
-                    <div className="nav__itemLineTwo"></div>
-                </div>
-                <div className="nav__item">
-                    <div className="nav__itemLineOne"></div>
-                    <div className="nav__itemLineTwo"></div>
-                </div>
-                <div className="nav__item">
-                    <ShoppingBasketIcon fontSize='large'></ShoppingBasketIcon>
-                    <div className="nav__itemLineTwo"></div>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="App">
+      <Router>
+
+        <Switch>
+
+          <Route path="/login">
+            <Login />
+          </Route>
+
+          <Route path="/checkout">
+            <Header />
+            <Checkout />
+          </Route>
+
+          <Route path="/">    
+            <Header />
+            <Home />
+          </Route>
+
+        </Switch>
+
+      </Router>
+
+    </div>
+  );
 }
 
 export default App;
